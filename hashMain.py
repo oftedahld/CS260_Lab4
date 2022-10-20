@@ -1,4 +1,4 @@
-from ChainedHash import ChainHash
+#from ChainedHash import ChainHash
 from StringHash import StringHash
 
 BASE_SIZE = 5
@@ -13,8 +13,8 @@ def main():
     print("\nStringHash tests\n")
 
     # # Basic tests
-    # testBaseFind()
-    # testBaseRemove()
+    testBaseFind()
+    testBaseRemove()
     # testBaseDisplay()
     # testBaseGrow()
     #
@@ -113,7 +113,7 @@ def testBaseGrow():
         print(" maple found")
     else:
         print(" maple not found")
-        baseGrow.removeItem("maple")
+    baseGrow.removeItem("maple")
     if baseGrow.findItem("maple"):
         print(" maple found")
     else:
