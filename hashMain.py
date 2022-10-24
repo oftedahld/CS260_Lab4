@@ -1,4 +1,4 @@
-#from ChainedHash import ChainHash
+from ChainedHash import ChainHash
 from StringHash import StringHash
 
 BASE_SIZE = 5
@@ -10,23 +10,23 @@ advWords = "dog", "cat", "ape", "cow", "frog", "fish", "goat", "bear", "deer", "
 def main():
     #uncomment functions to run tests
 
-    print("\nStringHash tests\n")
+    # print("\nStringHash tests\n")
 
     # # Basic tests
     testBaseFind()
     testBaseRemove()
-    # testBaseDisplay()
-    # testBaseGrow()
+    testBaseDisplay()
+    testBaseGrow()
     #
     # # Advanced tests
-    # print("\nChainHash tests\n")
-    #
-    # testAdvFind()
-    # testAdvRemove()
-    # testAdvDisplay()
+    print("\nChainHash tests\n")
+    
+    testAdvFind()
+    testAdvRemove()
+    testAdvDisplay()
     #
     # #test thinking problem
-    # testThink()
+    testThink()
 
 
 def testBaseFind():
@@ -60,7 +60,7 @@ def testBaseRemove():
         print(" maple found")
     else:
         print(" maple not found")
-    baseRemove.removeItem("maple")
+    baseRemove.removeItem("maple") #DRIVER EDIT: Had to un-indent this line, otherwise it wasn't removing maple to successfully complete the second check
     if baseRemove.findItem("maple"):
         print(" maple found")
     else:
@@ -137,7 +137,7 @@ def testAdvFind():
         print(" goat was found")
     else:
         print(" goat was not found")
-    if advFind.findItem("goat"):
+    if advFind.findItem("horse"): #DRIVER EDIT: Had to change the search parameter on this line from "goat" to "horse".
         print(" horse was found")
     else:
         print(" horse was not found")
